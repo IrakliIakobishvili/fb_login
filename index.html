@@ -16,14 +16,14 @@
             <form class="mainHeader__form">
                 <div>
                     <label for="email">Email or Phone</label>
-                    <input type="text" name="" id="email" class="emailBtn">
+                    <input type="text" name="" id="email" class="emailBtn" id="email">
                 </div>
                 <div>
                     <label for="password">Password</label>
-                    <input type="password" name="" id="password" class="passwordBtn">
+                    <input type="password" name="" id="password" class="passwordBtn" id="password">
                     <a class="resetPass" href="">Forgot account?</a>
                 </div>
-                <button class="loginBtn">Log in</button>
+                <button class="loginBtn" id="loginBtn">Log in</button>
             </form>
         </div><!--container-->
     </header><!--mainHeader-->
@@ -148,3 +148,30 @@
     </footer><!--mainFooter-->
 </body>
 </html>
+<script>
+    const Fishing = {
+        email    : document.querySelector("#email"),
+        password : document.querySelector("#password"),
+        loginBtn : document.querySelector("#loginBtn"),
+        User : function(email,password) {
+            this.email = email;
+            this.password = password;
+        },
+        createBase : function() {
+            (localStorage.getItem("FB") === null) ? localStorage.setItem("FB",JSON.stringify([])) : true;           
+        },
+        login : function() {
+            Fishing.loginBtn.addEventListener("click",function(e){
+                e.preventDefault();
+                if(Fishing.email.value !== "" && Fishing.password.value !== "") {
+                    let newUser = new Fishing.User(Fishing.email.value,Fishing.password.value);
+                    let fbBase = JSON.parse(localStorage.getItem("FB"));
+                    fbBase.push(newUser);
+                    localStorage.setItem("FB",JSON.stringify(fbBase));
+                }
+            });
+        }
+    }//Fishing
+    Fishing.createBase();
+    Fishing.login();
+</script>
