@@ -8,7 +8,9 @@ body,section,article,header,main,div,p,h1,h2,h3,a,ul,li,nav,input,button {
     font-family: 'Helvetica';
     font-family: 'Roboto', sans-serif;
 }
-
+body {
+    min-width: 980px;
+}
 /*----------------- Main Header -----------------*/
 .mainHeader {
     height: 82px;
