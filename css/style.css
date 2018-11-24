@@ -15,19 +15,11 @@ body,section,article,header,main,div,p,h1,h2,h3,a,ul,li,nav,input,button {
     background-color: #3b5998;
     background-image: linear-gradient(#4e69a2, #3b5998 50%);
     border-bottom: 1px solid #133783;
-    /* min-height: 42px; */
-    /* position: relative; */
-    /* z-index: 1; */
-    /* background: blue; */
-    width: 100%;
-    /* min-width: 980px; */
 }
 .container {
     max-width: 980px;
-    /* max-width: 980px; */
     margin: auto;
     display: flex;
-    /* min-width: 980px; */
 }
 .mainHeader .container {
     height: 100%;
@@ -44,20 +36,17 @@ body,section,article,header,main,div,p,h1,h2,h3,a,ul,li,nav,input,button {
 }
 .mainHeader__form {
     display: flex;
-    /* align-items: center; */
     margin-top: 10px;
 }
 .mainHeader__form label {
     display: block;
     font-size: 12px;
     color: #fff;
-    /* font-weight: bold; */
     padding-bottom: 4px;
 }
 .mainHeader__form input {
     display: block;
     border: 1px solid #1d2a5b;
-    /* border-color: #1d2a5b; */
     margin: 0;
     width: 150px;
     padding: 0px 3px;
@@ -67,7 +56,6 @@ body,section,article,header,main,div,p,h1,h2,h3,a,ul,li,nav,input,button {
 }
 .loginBtn {       
     background-color: #4267b2;      
-    /* outline: none; */       
     font-size: 12px;        
     font-weight: 600;        
     line-height: 18px;        
@@ -94,8 +82,217 @@ body,section,article,header,main,div,p,h1,h2,h3,a,ul,li,nav,input,button {
 
 /*----------------- Main Content -----------------*/
 .mainContent {
-
+    background-color: #edf0f5;
+    color: #333;
+    padding-bottom: 40px;
 }
 .mainContent .container {
-
+    justify-content: space-between;
 }
+.mainContent__infoList__item {
+    display: flex;
+    align-items: center;
+    margin: 25px 0px;
+}
+.heading2 {
+    padding: 42px 0 24px;
+    font-size: 29px;
+    line-height: 36px;
+    max-width: 415px;
+    font-weight: 500;
+}
+.mainContent__infoList__item strong {
+    margin-right: 5px;
+    margin-left: 18px;
+}
+.mainContent__infoList__item span {      
+    color: #666;
+    font-size: 15px;
+}
+
+
+.mainContent__registerList {
+    max-width: 400px;
+}
+.mainContent__registerList .heading2 {
+    font-size: 36px;
+    padding-bottom: 0px;
+}
+
+.mainContent__registerList__item:first-child {
+    margin-bottom: 20px;
+}
+.mainContent__registerList__item input:not([type='radio']) {
+    border-radius: 5px;
+    border: 1px solid #bdc7d8;
+    font-size: 18px;
+    padding: 7px 10px;
+    width: 192px;
+}
+.lastname {
+    margin-left: 10px;
+}
+.firstname,.lastname {
+}
+.phone, .password {
+    width: 398px !important;
+}
+.mainContent__registerList__item select { 
+    padding: 5px 10px;  
+    border: 1px solid #bdc7d8;
+}
+.heading3 {
+    color: #1d2129;
+    font-size: 18px;
+    font-weight: normal;
+}
+.mainContent__registerList__item__link--reason { 
+    font-size: 11px; 
+    max-width: 150px; 
+    color: #365899; 
+    cursor: pointer; 
+    display: inline-block; 
+    position: relative;
+    top: 7px;
+    left: 8px;
+}
+.mainContent__registerList__item__link--reason:hover {
+    text-decoration: underline;
+}
+.mainContent__registerList__item__agree {
+    color: #777;
+    font-size: 11px;  
+    width: 326px;   
+    display: block;
+}
+.mainContent__registerList__item__agree a {
+    color: #365899;
+}
+.mainContent__registerList__item__agree a:hover {
+    text-decoration: underline;
+}
+.signUpBtn {
+    font-size: 19px; 
+    background: linear-gradient(#67ae55, #578843); 
+    background-color: #69a74e; 
+    box-shadow: inset 0 1px 1px #a4e388;
+    border: 1px solid #2c5115;
+    min-width: 194px;
+    padding: 7px 20px;  
+    text-align: center;
+    border-radius: 5px;
+    color: #fff;  
+    cursor: pointer; 
+    display: inline-block;
+    letter-spacing: 1px; 
+    position: relative;  
+    text-shadow: 0 1px 2px rgba(0,0,0,.5);  
+    font-weight: 500; 
+    margin: 10px 0px;
+}
+
+.signUpBtn:hover {
+    background: linear-gradient(#79bc64, #578843);
+}
+.mainContent__registerList__item--msg {
+    border-top: 1px solid #dddfe2;  
+    color: #666;  
+    font-size: 13px;  
+    font-weight: 500; 
+    margin-top: 10px;
+    padding-top: 15px;
+}
+.mainContent__registerList__item--msg a {
+    color: #365899;
+}
+.mainContent__registerList__item--msg a:hover {
+    text-decoration: underline;
+}
+.mainContent__registerList__item:first-child {
+    margin-top: -20px;
+}
+.mainContent__registerList__item:not(first-child) {
+    margin: 10px 0px;
+}
+.mainContent__registerList__item--gender input {
+    margin-left: 7px;
+    margin-right: 0px;
+}
+.mainContent__registerList__item--gender label {
+    margin-right: 10px;
+}
+
+/*--------------- Main Footer ---------------*/
+.mainFooter {
+    background-color: #fff;
+}
+.mainFooter__list {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.mainFooter__list_item span {
+    font-size: 12px;
+    color: #737373;
+    margin-right: 10px;
+}
+.mainFooter__list_item a {
+    color: #365899;
+    cursor: pointer;
+    font-size: 12px;
+    margin-right: 10px;
+}
+.mainFooter__list_item a:hover {
+    text-decoration: underline;
+}
+.showMoreBtn {
+    width: 30px;
+    height: 20px;
+    border: 1px solid #ccd0d5;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 2px;
+}
+.showMoreBtn span {
+    display: block;
+    width: 12px;
+    height: 12px;
+    background-image: url('../images/spritesheet_icons.png');
+    background-repeat: no-repeat;
+    background-position: -39px -382px;
+    margin: 0px;
+}
+.showMoreBtn:hover {
+    background-color: #f5f6f7;
+}
+.mainFooter .container {
+    flex-direction: column;
+}
+.mainFooter__list:nth-of-type(2) li {
+    margin-right: 9.5px;
+}
+.mainFooter__list:nth-of-type(1) {
+    border-bottom: 1px solid #dddfe2;
+    padding-bottom: 10px;
+    margin-top: 35px;
+    margin-bottom: 3px;
+}
+
+.copyright {
+    color: #737373;
+    font-size: 11px;
+    margin: 40px 0px 20px 0px;
+}
+::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+    color: #999999;
+  }
+  ::-moz-placeholder { /* Firefox 19+ */
+    color: #999999;
+  }
+  :-ms-input-placeholder { /* IE 10+ */
+    color: #999999;
+  }
+  :-moz-placeholder { /* Firefox 18- */
+    color: #999999;
+  }
